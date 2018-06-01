@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CamptonLight';
+    src: url('fonts/CamptonLight.eot');
+    src: url('fonts/CamptonLight.eot') format('embedded-opentype'),
+         url('fonts/CamptonLight.woff2') format('woff2'),
+         url('fonts/CamptonLight.woff') format('woff'),
+         url('fonts/CamptonLight.ttf') format('truetype'),
+         url('fonts/CamptonLight.svg#CamptonLight') format('svg');
+}

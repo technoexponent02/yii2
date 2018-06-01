@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CamptonMedium';
+    src: url('fonts/CamptonMedium.eot');
+    src: url('fonts/CamptonMedium.eot') format('embedded-opentype'),
+         url('fonts/CamptonMedium.woff2') format('woff2'),
+         url('fonts/CamptonMedium.woff') format('woff'),
+         url('fonts/CamptonMedium.ttf') format('truetype'),
+         url('fonts/CamptonMedium.svg#CamptonMedium') format('svg');
+}

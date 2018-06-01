@@ -1,0 +1,42 @@
+{
+	"name": "drivesoftz/yii2-tcpdf",
+	"version": "1.0.1",
+	"homepage": "http://www.tcpdf.org/",
+	"type": "library",
+	"description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
+	"keywords": ["DriveSoft","CoachMaxz","PDF","tcpdf","PDFD32000-2008","qrcode","datamatrix","pdf417","barcodes"],
+	"license": "LGPLv3",
+	"authors": [
+	{
+		"name": "Eakkabin Jaikeawma",
+		"email": "eakkabin_it@hotmail.com",
+		"homepage": "https://drivesoft.co"
+	}
+	],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"classmap": [
+			"fonts",
+			"config",
+			"include",
+			"tcpdf.php",
+			"tcpdf_base.php",
+			"tcpdf_library.php",
+			"tcpdf_parser.php",
+			"tcpdf_import.php",
+			"tcpdf_barcodes_1d.php",
+			"tcpdf_barcodes_2d.php",
+			"include/tcpdf_colors.php",
+			"include/tcpdf_filters.php",
+			"include/tcpdf_font_data.php",
+			"include/tcpdf_fonts.php",
+			"include/tcpdf_images.php",
+			"include/tcpdf_static.php",
+			"include/barcodes/datamatrix.php",
+			"include/barcodes/pdf417.php",
+			"include/barcodes/qrcode.php"
+		]
+	}
+}

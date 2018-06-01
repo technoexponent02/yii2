@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color:#fff;}
+.whitebox{margin-top:24px;}
+.adminHeadlinks{display:block; font-size:0px; font-size:0px; margin:14px 0 0 0; padding:0; text-align:left;}
+.adminHeadlinks li{display:inline-block; vertical-align:top; font-size:14px; margin:0 40px 0 0;}
+.adminHeadlinks li:first-child{margin:0;}
+.adminHeadlinks li a,
+.adminHeadlinks li .btn{display:block; color:#fff; font-family:'CamptonLight'; font-size:15px; padding-left:0; padding-top:0;   padding-bottom:0; background:transparent;}
+.adminBody{display:block;}
+.adminSidebar{display:block; float:right; background-color:#334e9f;overflow:auto; min-height:100vh; width:250px; border-top:2px solid #29427e;}
+.adminSidebar > ul,
+.adminSidebar > ul > li > ul{display:block; margin:0; padding:0;}
+.adminSidebar > ul > li > ul{display:none;}
+.adminSidebar > ul > li,
+.adminSidebar > ul > li > ul > li{display:block; border-bottom:1px solid #29427e;}
+.adminSidebar > ul > li > ul > li{border-bottom:none; border-top:1px solid #29427e;}
+.adminSidebar > ul > li > a,
+.adminSidebar > ul > li > ul > li > a{display:block; text-align:center; color:#fff; font-family:'CamptonLight'; font-size:15px; line-height:18px; padding:16px 24px; position:relative;}
+.adminSidebar > ul > li > a .ico{display:block; position:absolute; top:50%; left:8px; -webkit-transform:translate(0,-50%); transform:translate(0,-50%); width:12px; height:12px; background:url(../images/admin-nav-arrow.svg) no-repeat center center; background-size:100% auto; -webkit-transition:400ms; transition:400ms; margin-top:0;}
+.adminSidebar > ul > li > a.open .ico{-webkit-transform: rotate(90deg); transform:rotate(90deg); margin-top:-6px;}
+.adminSidebar > ul > li > ul > li > a{padding-top:10px; padding-bottom:10px;}
+.adminSidebar ul li a:hover,
+.adminSidebar ul li a.sl{background-color:#29427e;}
+.adminLeftcont{display:block; padding:24px 266px 24px 90pt;}
+.ovrvwBoxRw{display:block; margin:0 -9px; font-size:0px;}
+.ovrvwBoxRw .colm{display:inline-block; vertical-align:top; width:22%; padding:0 9px; font-size:14px;}
+.ovrvwBoxRw .colm:nth-child(3){width:34%;}
+.ovrvwBoxRw .colm .bx{display:block; padding:10px 0 8px 40px; min-height:138px;}
+.bxTl{display:block; color:#cccccc; font-size:20px; line-height:24px;font-family: 'CamptonSemiBold'; padding:0 12px 0 0; margin:0;}
+.bxNo{display:block; color:#4bc7ef; font-size:28px; line-height:32px;font-family: 'CamptonSemiBold'; padding:0 12px 0 0; margin:0; margin:6px 0 0 0;}
+.bxTable{width:100%;}
+.bxTable tr td{padding:6px; color:#b3b3b3; font-size:14px; line-height:16px; border-top:1px solid #f2f2f2;}
+.bxTable tr:first-child td{border:none;}
+.bxTable tr td:last-child{padding-right:6px;}
+.whitebox .secTl{margin:-20px -20px 16px -20px; padding:12px 16px; background-color:#f1f1f1;}
+.whitebox.no-padding .secTl{margin:0 0 16px 0;}
+.adminUsers{display:block; margin:0 -12px; font-size:0px;}
+.adminUsers .colm{display:inline-block; vertical-align:top; width:55%; padding:0 12px;}
+.adminUsers .colm:last-child{width:45%;}
+.usertable{width:100%;}
+.usertable tr td{padding:16px 12px; border:none !important; border-top:1px solid #f2f2f2 !important; color:#b3b3b3;text-align:right;}
+.usertable tr:first-child td{border:none !important;}
+.usertable tr td:last-child{text-align:left; padding-left:24px;}
+.secTl + .whitebox{margin-top:0;}
+.form-group.no-gap{margin:0;}
+.adminAdView{display:block; text-align:center;}
+.adminAdView .adArea{display:block; vertical-align:top; /* width:680px; max-width:100%; */}
+.adminAdView .adArea .ad{display:block;}
+.adminAdView img{display:block; width:100%; height:auto;}
+.adviewRow{display:block; margin:0 -8px; font-size:0px; text-align:center;}
+.adviewRow .colM{display:inline-block; vertical-align:top; padding:6px; font-size:14px; width:472px; max-width:50%;}
+.adviewRow .colM.colM1{width:962px; max-width:100%;}
+.adminDashboardrow{display:block; margin:0 -10px; font-size:0px;}
+.adminDashboardrow .colm{display:block; float:left; vertical-align:top; width:55%; padding:0 10px;}
+.adminDashboardrow .colm:first-child{width:45%;}
+
+.adminDashboardrowCont{display:block; float:left; width:100%;}
+.adminUserCont{display:block; float:left; width:224px; max-width:100%;}
+.adminUserImage{display:block; width:224px; height:auto; max-width:100%; border:1px solid #ccc; margin:0 0 8px 0;}
+.adminUserImage img{display:block; width:100%; height:auto; max-width:100%;}
+.picSet{display:block; color:#4dc8ef; font-size:14px; line-height:16px; margin:0 0 8px 0;}
+.picSet label{display:inline-block; color:#4dc8ef; font-size:14px; line-height:16px; font-family:'CamptonBook', sans-serif; position:relative; cursor:pointer;}
+.picSet label:hover{text-decoration:underline;}
+.picSet label input{display:block; position:absolute; top:0; left:0; width:1px; height:1px; opacity:0;}
+.adminUserCont .custRdolist{margin:0;}
+.adminUserCont .custRdolist label{font-family:'CamptonBook', sans-serif;}
+.badgProgress{display:block; color:#999; font-size:14px; line-height:20px; font-family: 'CamptonSemiBold'; text-align:center;}
+.botInfotxtx{display:block; float:left; width:100%;}
+
+.notAllowedCont{display:block;text-align:center;width:600px;max-width:100%;margin: 60px auto 0 auto;}
+.notAllowedCont img{display:inline-block; vertical-align:top; width:160px; height:auto;}
+.notAllowedCont .msg{display:block;color:#ccc;font-size: 26px;line-height: 30px;font-family: 'CamptonBold';margin: 28px 0 0 0;}
+
+.adminloginPage{background-color:#334e9f;}
+.adminLoginArea{display:block; /* position:absolute; top:0; left:0; width:100%; height:100%; */ padding:60px 16px 30px 16px; overflow:auto;}
+
+.adminloginPage .panelcs{max-width:460px;}
+/* .adminloginPage .panelcs.panel-warning>.panel-heading{padding-top:14px; padding-bottom:10px;} */
+.forgotpassBox{display:none;}
+.forgotPassFlds{display:block; }
+.forgotPassMsg{display:block; color:#b3b3b3; text-align:center; font-size:17px; line-height:22px; padding:42px 0 34px 0;}
+
+.panelcs label.remebrtxt{padding-left:24px;position: relative;}
+.remebrtxt > span{display:none;}
+.panelcs label.remebrtxt .checkbox{position:static;}
+.panelcs label.remebrtxt .help-block:before{
+	content:"";
+	width: 16px;
+	height: 16px;
+	border: 2px solid #b3b3b3;
+	display: block;
+	margin: 0;
+	position: absolute;
+	vertical-align: middle;
+	top:0;
+	left:0;
+}
+.panelcs label.remebrtxt .help-block:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #b3b3b3;
+    top:4px;
+    left:4px;
+    opacity: 0;
+}
+.panelcs label.remebrtxt input:checked + .help-block:after{opacity:1;}
+
+.adminHeadlinks .dropdown-menu {
+    background-color: #29427e;
+	padding:0;
+}
+.adminHeadlinks .dropdown-menu>li{display:block;}
+.adminHeadlinks .dropdown-menu>li>a {
+	color:#ffffff;
+	border-top:1px solid #162d5b;
+	padding:8px 12px;
+	display:block;
+}
+.adminHeadlinks .dropdown-menu>li:first-child>a {
+	border-top:0 none;
+}
+.adminHeadlinks .dropdown-menu>li>a:focus, 
+.adminHeadlinks .dropdown-menu>li>a:hover {
+    color: #ffc829 !important;
+    text-decoration: none;
+    background-color: #33519a;
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    font-family: 'CamptonBook';
+    font-family: 'CamptonSemiBold';
+    font-family: 'CamptonLight';	
+	font-family: 'CamptonMedium';
+	font-family: 'CamptonBold';
+	
+	font-family: 'dinnextltarabiclight';
+	font-family: 'DINNextLTArabicMedium';
+	font-family: 'DINNextLTArabicBold';
+*/

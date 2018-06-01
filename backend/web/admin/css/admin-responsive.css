@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document */
+@media (max-width:1200px) {
+	.adminPage header .container{padding-left:16px; padding-right:16px;}
+	.adminLeftcont{padding-left:16px;}
+}

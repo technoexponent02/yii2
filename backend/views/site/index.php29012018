@@ -1,0 +1,202 @@
+<?php
+use yii\helpers\Html;
+/* @var $this yii\web\View */
+use common\models\User;
+
+$this->title = 'Dashboard';
+?>
+		<div class="ovrvwBoxRw">
+        <div class="colm">
+            <div class="whitebox no-padding">
+                <div class="bx">
+                    <h2 class="bxTl">Todays posts</h2>
+                    <span class="bxNo"><?php echo $total_today_posted_properties; ?></span>
+                    <table class="bxTable">
+                        <tr>
+                            <td>Residential</td>
+                            <td><?php echo $total_today_posted_properties_residential; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Commercial</td>
+                            <td><?php echo $total_today_posted_properties_commercial; ?></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="colm">
+            <div class="whitebox no-padding">
+                <div class="bx">
+                    <h2 class="bxTl">Average<br/>Time on site</h2>
+                    <span class="bxNo">10.5</span>
+                </div>
+            </div>
+        </div>
+        <div class="colm">
+            <div class="whitebox no-padding">
+                <div class="bx">
+                    <h2 class="bxTl">Todays visitors</h2>
+                    <span class="bxNo">239</span>
+                    <table class="bxTable">
+                        <tr>
+                            <td>New Visitors</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>Total Of Current Month</td>
+                            <td>738</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="colm">
+            <div class="whitebox no-padding">
+                <div class="bx">
+                    <h2 class="bxTl">Live Posts</h2>
+                    <span class="bxNo"><?php echo $total_live_properties; ?></span>
+                    <table class="bxTable">
+                        <tr>
+                            <td>of all types</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="whitebox">
+        <h2 class="secTl">Visitors</h2>
+        <div class="preformanceChart">
+        <?php echo Html::img('@web/admin/images/dashboard-image2.jpg'); ?>
+        </div>
+    </div>
+    <div class="adminUsers">
+        <div class="colm">
+            <div class="hide"></div>
+            <div class="whitebox no-padding">
+                <h2 class="secTl no-gap"><a href="<?php echo Yii::$app->urlManager->createUrl(['properties']); ?>">Last Posts</a></h2>
+                <div class="table-responsive">
+                    <?php 
+                    if ($new_posts != null)
+                    {
+                        ?>
+                        <table class="usertable postsTable nohover-btn">
+                        <?php
+                        foreach ($new_posts as $key => $new_post) {
+                            ?>
+                            <tr>
+                                <td><?php echo $new_post->id; ?></td>
+                                <td><?php echo $new_post->user->name; ?></td>
+                                <td><?php echo $new_post->propertyType->translatateData->name; ?></td>
+                                <td><?php 
+                                if ($new_post->status == 1)
+                                    {
+                                        echo  '<span class="btn btn-warning btn-xs">Pending</span>';
+                                    }
+                                    else if($new_post->status == 2)
+                                    {
+                                        echo '<span class="btn btn-success btn-xs">Approved</span>';
+                                    } 
+                                    else if($new_post->status == 3)
+                                    {
+                                        echo '<span class="btn btn-danger btn-xs">Stopped</span>';
+                                    } 
+                                ?></td>
+                            </tr>
+                            <?php 
+                        }
+                        ?>
+                        </table>
+                        <?php 
+                    }
+                    ?>
+                    
+                        
+                        
+                    
+                </div>					
+            </div>					
+        </div>
+        <div class="colm">
+            <div class="hide"></div>
+            <div class="whitebox no-padding">
+                <h2 class="secTl no-gap"><a href="<?php echo Yii::$app->urlManager->createUrl(['user']); ?>">New Users</a></h2>
+                <div class="table-responsive">
+                    <?php 
+                    if ($new_users != null)
+                    {
+                        ?>
+                        <table class="usertable postsTable nohover-btn">
+                        <?php 
+                        foreach ($new_users as $key => $new_user) {
+                            ?>
+                            <tr>
+                                <td><?php echo $new_user->id ?></td>
+                                <td><?php if ($new_user->user_type == 3) 
+                                            {
+                                                echo 'Individual';
+                                            }
+                                        else if ($new_user->user_type == 4) {
+                                            echo 'Organization';
+                                        }
+                                        else if ($new_user->user_type == 5) {
+                                            echo 'Organization Subuser';
+                                        }
+                                       ?></td>
+                                <td>
+                                    <?php 
+                                     switch ($new_user->status) {
+                                    case User::STATUS_ACTIVE:
+                                        if ($new_user->pending_verification == 2)
+                                        {
+                                            echo  '<span class="btn btn-default btn-xs">Inactivated</span>';
+
+                                        }
+                                        else
+                                        {
+                                           echo  '<span class="btn btn-primary btn-xs">Activated</span>'; 
+
+                                        }                                          
+                                        break;
+                                    case User::STATUS_UNACTIVATED:
+                                       echo  '<span class="btn btn-default btn-xs">Inactivated</span>';
+                                       break;
+                                    case User::STATUS_REQUESTED:
+                                        echo  'Requested'; 
+                                        break;
+                                    case User::STATUS_BANNED:
+                                        echo  '<span class="btn btn-danger btn-xs">Banned</span>';
+                                        break;                                        
+                                    case User::STATUS_BLOCKED:
+                                         echo  '<span class="btn btn-danger btn-xs">Blocked</span>';
+                                        //echo  ''; 
+                                        break; 
+                                    case User::STATUS_DELETED:
+                                        //echo  'Deleted';
+                                        echo  '<span class="btn btn-danger btn-xs">Deleted</span>';  
+                                        break;    
+                                    // case 5:
+                                    //     return 'Organization Subuser';
+                                    //     break;                                   
+                                    default:
+                                        echo 'Not Set';
+                                        break;
+                                }
+                                    ?>
+
+                                </td>
+                            </tr>
+                            <?php 
+                        }
+                        ?>
+                         </table>
+                        <?php 
+                    }
+                    ?>                  
+                        
+                    
+                   
+                </div>					
+            </div>					
+        </div>
+    </div>

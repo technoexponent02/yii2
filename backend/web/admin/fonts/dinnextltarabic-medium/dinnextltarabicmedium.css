@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DINNextLTArabicMedium';
+    src: url('fonts/DINNextLTArabicMedium.eot');
+    src: url('fonts/DINNextLTArabicMedium.eot') format('embedded-opentype'),
+         url('fonts/DINNextLTArabicMedium.woff2') format('woff2'),
+         url('fonts/DINNextLTArabicMedium.woff') format('woff'),
+         url('fonts/DINNextLTArabicMedium.ttf') format('truetype'),
+         url('fonts/DINNextLTArabicMedium.svg#DINNextLTArabicMedium') format('svg');
+}

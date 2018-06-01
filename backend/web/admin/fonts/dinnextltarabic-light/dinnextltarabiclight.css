@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'dinnextltarabiclight';
+    src: url('fonts/dinnextltarabiclight.eot');
+    src: url('fonts/dinnextltarabiclight.eot') format('embedded-opentype'),
+         url('fonts/dinnextltarabiclight.woff2') format('woff2'),
+         url('fonts/dinnextltarabiclight.woff') format('woff'),
+         url('fonts/dinnextltarabiclight.ttf') format('truetype'),
+         url('fonts/dinnextltarabiclight.svg#dinnextltarabiclight') format('svg');
+}

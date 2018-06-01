@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CamptonBook';
+    src: url('fonts/CamptonBook.eot');
+    src: url('fonts/CamptonBook.eot') format('embedded-opentype'),
+         url('fonts/CamptonBook.woff2') format('woff2'),
+         url('fonts/CamptonBook.woff') format('woff'),
+         url('fonts/CamptonBook.ttf') format('truetype'),
+         url('fonts/CamptonBook.svg#CamptonBook') format('svg');
+}
